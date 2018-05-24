@@ -1,13 +1,17 @@
 " Vim syntax file
 " Language: capnp
 " Maintainer: Charles Strahan
+" Maintainer: Kam Y. Tse
+" Refer https://github.com/capnproto/capnproto/blob/master/highlighting/qtcreator/capnp.xml
+
 
 if exists("b:current_syntax")
   finish
 endif
 
 " Keywords
-syn keyword capnpKeyword using import struct union enum interface
+syn keyword capnpKeyword struct enum interface union import using const
+syn keyword capnpKeyword annotation extends in of on as with from fixed
 
 " Types
 syn match capnpType ":[.a-zA-Z0-9()]\+"
